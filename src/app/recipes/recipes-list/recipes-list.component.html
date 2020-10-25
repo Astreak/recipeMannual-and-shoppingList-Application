@@ -1,6 +1,22 @@
 <div class="row">
     <div class="col-xs-12">
-        
+        <button class="btn btn-success">Add Recipe</button>
+    </div>
+    <hr>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <a href="#" class="list-group-item clearfix" *ngFor="let r of recipes">
+            <div class="pull-left">
+                <h3 class="list-group-title-heading">
+                    {{r.name}}
+                </h3>
+                <p class="list-group-item-e">{{r.description}}</p>
+            </div>
+            <span class="pull-right"> <img [src]="r.imagePath" alt={{r.name}} class="image-responsive" style="max-height:50px;">
+            </span>
+            
+        </a>
     </div>
 </div>
 
